@@ -3,10 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>my-project</title>
+    <title>Shopping List App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="shopping-list">
+      <h1>{{ header ? header : 'welcome' }}</h1>
+      <input type="text" v-model="header">
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+    var shoppingList = new Vue({
+      el: '#shopping-list',
+      data: {
+        header: 'Vue is ready to party'
+      }
+    });
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
