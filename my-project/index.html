@@ -10,7 +10,7 @@
       <h1>{{ header.toLocaleUpperCase() }}</h1>
       <div class="add-item-form">
         <input v-model="newItem" type="text" placeholder="Add an item">
-        <button class="btn btn-primary">Save Item</button>
+        <button class="btn btn-primary" v-on:click="items.push(newItem)">Save Item</button>
       </div>
       <ul>
         <li v-for="item in items">{{ item }}</li>
