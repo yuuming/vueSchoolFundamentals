@@ -8,7 +8,10 @@
   <body>
     <div id="shopping-list">
       <h1>{{ header.toLocaleUpperCase() }}</h1>
-      <input v-model="newItem" type="text" placeholder="Add an item">
+      <div class="add-item-form">
+        <input v-model="newItem" type="text" placeholder="Add an item">
+        <button class="btn btn-primary">Save Item</button>
+      </div>
       <ul>
         <li v-for="item in items">{{ item }}</li>
       </ul>
@@ -18,7 +21,7 @@
     var shoppingList = new Vue({
       el: '#shopping-list',
       data: {
-        header: 'Vue is ready to party',
+        header: 'shopping list app',
         newItem: '',
         items: [
           '10 party hats',
