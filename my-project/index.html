@@ -7,7 +7,11 @@
   </head>
   <body>
     <div id="shopping-list">
-      <h1>{{ header.toLocaleUpperCase() }}</h1>
+      <div>
+          <h1>{{ header.toLocaleUpperCase() }}</h1>
+          <button class="btn btn-primary">Add Item</button>
+          <button class="btn btn-cancel">Cancel</button>
+      </div>  
       <div v-if="state === 'edit' "class="add-item-form">
         <input v-model="newItem" type="text" placeholder="Add an item" @keyup.enter="saveItem">
         <button class="btn btn-primary" @click="saveItem">Save Item</button>
