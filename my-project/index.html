@@ -15,6 +15,7 @@
       <ul>
         <li v-for="item in items">{{ item }}</li>
       </ul>
+      <p v-if="items.length === 0">Nice job! you've bought all your items!</p>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
@@ -24,9 +25,9 @@
         header: 'shopping list app',
         newItem: '',
         items: [
-          '10 party hats',
-          '2 board games',
-          '20 cups'
+          // '10 party hats',
+          // '2 board games',
+          // '20 cups'
         ]
       },
       methods: {
