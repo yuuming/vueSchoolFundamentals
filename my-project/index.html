@@ -16,6 +16,7 @@
         <input v-model="newItem" type="text" placeholder="Add an item" @keyup.enter="saveItem">
         <button class="btn btn-primary" @click="saveItem">Save Item</button>
       </div>
+      <a v-bind:href="newItem" target="_blank">Dynamic Link</a>
       <ul>
         <li v-for="item in items">{{ item }}</li>
       </ul>
